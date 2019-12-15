@@ -1,0 +1,195 @@
+Executing: stoq dbadmin updateschema -v -d stoq -H localhost -p 5432 -u stoq
+
+02:27:24 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+02:27:24 stoqlib.database.migration Upgrading database (plugins=True, backup=True)
+
+02:27:24 stoqlib.database.migration Locking database
+
+02:27:24 stoqlib.database.migration Releasing database lock
+
+02:27:24 stoqlib.database.settings Testing database connectivity using command line tools
+
+02:27:24 stoqlib.database.settings executing psql -n -q -w --variable ON_ERROR_STOP= -c SELECT 1; -U stoq -h localhost -p 5432 stoq
+
+02:27:25 stoqlib.database.migration Making a backup to /tmp/stoq-dump-s9dzg98k
+
+02:27:25 stoqlib.database.create BACKUP-START:
+
+02:27:25 stoqlib.database.settings Dumping database to /tmp/stoq-dump-s9dzg98k
+
+02:27:25 stoqlib.database.settings executing pg_dump --format=custom --encoding=UTF-8 -f /tmp/stoq-dump-s9dzg98k -U stoq -h localhost -p 5432 stoq
+
+02:27:38 stoqlib.lib.pluginmanager Eggs cache created in /tmp/stoq8coc3vs2eggs
+
+02:27:38 stoqlib.database.migration Updating schema
+
+02:27:38 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+02:27:38 stoqlib.database.settings Executing SQL script /tmp/stoqfunctions-1lm3kkgw database locked=False
+
+02:27:38 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+02:27:38 stoqlib.database.migration Applying 11 patches
+
+02:27:38 stoqlib.database.create PATCHES:11
+
+02:27:38 stoqlib.database.create PATCH:6.1
+
+02:27:38 stoqlib.database.settings Executing SQL script /tmp/patch-6-1-ulm4jjv6 database locked=False
+
+02:27:38 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+02:27:38 stoqlib.database.create PATCH:6.2
+
+02:27:38 stoqlib.database.settings Executing SQL script /tmp/patch-6-2-42idtkba database locked=False
+
+02:27:38 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:105: ERROR:  constraint "quotation_identifier_branch_id_key" of relation "quotation" does not exist
+
+02:28:02 stoqlib.lib.crashreport.CustomRavenClient Configuring Raven for host: <raven.conf.remote.RemoteConfig object at 0x7fa9ddbdfcc0>
+
+02:28:02 stoqlib.lib.crashreport.CustomRavenClient Sending message of length 2984 to https://sentry.stoq.com.br/api/4/store/
+
+02:28:02 stoqlib.database.create ERROR:Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:105: ERROR:  constraint "quotation_identifier_branch_id_key" of relation "quotation" does not exist
+
+
+
+02:28:02 stoqlib.database.migration Restoring backup /tmp/stoq-dump-s9dzg98k
+
+02:28:02 stoqlib.database.create RESTORE-START:
+
+02:28:02 stoqlib.database.settings Restoring database stoq using /tmp/stoq-dump-s9dzg98k
+
+02:28:02 stoqlib.database.settings Cleaning database stoq__backup_20191215_0228
+
+02:28:02 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:28:02 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:28:02 stoqlib.database.settings Dropped database stoq__backup_20191215_0228
+
+02:28:02 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:28:04 sentry.errors        Sentry responded with an error: The read operation timed out (url: https://sentry.stoq.com.br/api/4/store/)
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3/dist-packages/raven/transport/threaded.py", line 172, in send_sync
+
+    super(ThreadedHTTPTransport, self).send(url, data, headers)
+
+  File "/usr/lib/python3/dist-packages/raven/transport/http.py", line 43, in send
+
+    ca_certs=self.ca_certs,
+
+  File "/usr/lib/python3/dist-packages/raven/utils/http.py", line 66, in urlopen
+
+    return opener.open(url, data, timeout)
+
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+
+    response = self._open(req, data)
+
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+
+    '_open', req)
+
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+
+    result = func(*args)
+
+  File "/usr/lib/python3/dist-packages/raven/utils/http.py", line 46, in https_open
+
+    return self.do_open(ValidHTTPSConnection, req)
+
+  File "/usr/lib/python3.5/urllib/request.py", line 1257, in do_open
+
+    r = h.getresponse()
+
+  File "/usr/lib/python3/dist-packages/raven/breadcrumbs.py", line 346, in getresponse
+
+    rv = real_getresponse(self, *args, **kwargs)
+
+  File "/usr/lib/python3.5/http/client.py", line 1213, in getresponse
+
+    response.begin()
+
+  File "/usr/lib/python3.5/http/client.py", line 307, in begin
+
+    version, status, reason = self._read_status()
+
+  File "/usr/lib/python3.5/http/client.py", line 268, in _read_status
+
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+
+    return self._sock.recv_into(b)
+
+  File "/usr/lib/python3.5/ssl.py", line 929, in recv_into
+
+    return self.read(nbytes, buffer)
+
+  File "/usr/lib/python3.5/ssl.py", line 791, in read
+
+    return self._sslobj.read(len, buffer)
+
+  File "/usr/lib/python3.5/ssl.py", line 575, in read
+
+    v = self._sslobj.read(len, buffer)
+
+socket.timeout: The read operation timed out
+
+02:28:04 sentry.errors.uncaught ['SQLError: psql:<stdin>:105: ERROR:  constraint "quotation_identifier_branch_id_key" of relation "quotation" does not exist', '  File "stoqlib/database/migration.py", line 439, in update', '  File "stoqlib/database/migration.py", line 313, in update', '  File "stoqlib/database/migration.py", line 235, in _update_schema', '  File "stoqlib/database/migration.py", line 114, in apply', '  File "stoqlib/database/settings.py", line 590, in execute_sql']
+
+02:28:04 stoqlib.database.settings executing pg_restore -d stoq__backup_20191215_0228 -U stoq -h localhost -p 5432 /tmp/stoq-dump-s9dzg98k
+
+02:28:04 stoqlib.database.create RESTORE-DONE:stoq__backup_20191215_0228
+
+

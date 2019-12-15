@@ -1,0 +1,121 @@
+Executing: stoq dbadmin updateschema -v -d stoq -H localhost -p 5432 -u stoq
+
+02:10:30 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+02:10:30 stoqlib.database.migration Upgrading database (plugins=True, backup=True)
+
+02:10:30 stoqlib.database.migration Locking database
+
+02:10:30 stoqlib.database.migration Releasing database lock
+
+02:10:30 stoqlib.database.settings Testing database connectivity using command line tools
+
+02:10:30 stoqlib.database.settings executing psql -n -q -w --variable ON_ERROR_STOP= -c SELECT 1; -U stoq -h localhost -p 5432 stoq
+
+02:10:30 stoqlib.database.migration Making a backup to /tmp/stoq-dump-df4tc39v
+
+02:10:30 stoqlib.database.create BACKUP-START:
+
+02:10:30 stoqlib.database.settings Dumping database to /tmp/stoq-dump-df4tc39v
+
+02:10:30 stoqlib.database.settings executing pg_dump --format=custom --encoding=UTF-8 -f /tmp/stoq-dump-df4tc39v -U stoq -h localhost -p 5432 stoq
+
+02:10:43 stoqlib.lib.pluginmanager Eggs cache created in /tmp/stoqai5ff2eleggs
+
+02:10:43 stoqlib.database.migration Updating schema
+
+02:10:43 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+02:10:43 stoqlib.database.settings Executing SQL script /tmp/stoqfunctions-be5n2col database locked=False
+
+02:10:43 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+02:10:43 stoqlib.database.migration Applying 11 patches
+
+02:10:43 stoqlib.database.create PATCHES:11
+
+02:10:43 stoqlib.database.create PATCH:6.1
+
+02:10:43 stoqlib.database.settings Executing SQL script /tmp/patch-6-1-rk976qmt database locked=False
+
+02:10:43 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+02:10:43 stoqlib.database.create PATCH:6.2
+
+02:10:43 stoqlib.database.settings Executing SQL script /tmp/patch-6-2-zx7eg09p database locked=False
+
+02:10:43 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:73: ERROR:  constraint "payment_identifier_branch_id_key" of relation "payment" does not exist
+
+02:11:08 stoqlib.lib.crashreport.CustomRavenClient Configuring Raven for host: <raven.conf.remote.RemoteConfig object at 0x7f3148f41cc0>
+
+02:11:08 stoqlib.lib.crashreport.CustomRavenClient Sending message of length 2991 to https://sentry.stoq.com.br/api/4/store/
+
+02:11:08 stoqlib.database.create ERROR:Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:73: ERROR:  constraint "payment_identifier_branch_id_key" of relation "payment" does not exist
+
+
+
+02:11:08 stoqlib.database.migration Restoring backup /tmp/stoq-dump-df4tc39v
+
+02:11:08 stoqlib.database.create RESTORE-START:
+
+02:11:08 stoqlib.database.settings Restoring database stoq using /tmp/stoq-dump-df4tc39v
+
+02:11:08 stoqlib.database.settings Cleaning database stoq__backup_20191215_0211
+
+02:11:08 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:11:08 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:11:08 stoqlib.database.settings Dropped database stoq__backup_20191215_0211
+
+02:11:08 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+02:11:10 stoqlib.database.settings executing pg_restore -d stoq__backup_20191215_0211 -U stoq -h localhost -p 5432 /tmp/stoq-dump-df4tc39v
+
+02:11:10 stoqlib.database.create RESTORE-DONE:stoq__backup_20191215_0211

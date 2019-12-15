@@ -1,0 +1,129 @@
+Executing: stoq dbadmin updateschema -v -d stoq -H localhost -p 5432 -u stoq
+
+01:59:19 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+01:59:19 stoqlib.database.migration Upgrading database (plugins=True, backup=True)
+
+01:59:19 stoqlib.database.migration Locking database
+
+01:59:19 stoqlib.database.migration Releasing database lock
+
+01:59:19 stoqlib.database.settings Testing database connectivity using command line tools
+
+01:59:19 stoqlib.database.settings executing psql -n -q -w --variable ON_ERROR_STOP= -c SELECT 1; -U stoq -h localhost -p 5432 stoq
+
+01:59:20 stoqlib.database.migration Making a backup to /tmp/stoq-dump-p5lsddrg
+
+01:59:20 stoqlib.database.create BACKUP-START:
+
+01:59:20 stoqlib.database.settings Dumping database to /tmp/stoq-dump-p5lsddrg
+
+01:59:20 stoqlib.database.settings executing pg_dump --format=custom --encoding=UTF-8 -f /tmp/stoq-dump-p5lsddrg -U stoq -h localhost -p 5432 stoq
+
+01:59:33 stoqlib.lib.pluginmanager Eggs cache created in /tmp/stoq51vyw0gdeggs
+
+01:59:33 stoqlib.database.migration Updating schema
+
+01:59:33 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/stoq?isolation=read-committed
+
+01:59:33 stoqlib.database.settings Executing SQL script /tmp/stoqfunctions-dpolgn1n database locked=False
+
+01:59:33 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+01:59:33 stoqlib.database.migration Applying 11 patches
+
+01:59:33 stoqlib.database.create PATCHES:11
+
+01:59:33 stoqlib.database.create PATCH:6.1
+
+01:59:33 stoqlib.database.settings Executing SQL script /tmp/patch-6-1-t2wdom0t database locked=False
+
+01:59:33 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+01:59:33 stoqlib.database.create PATCH:6.2
+
+01:59:33 stoqlib.database.settings Executing SQL script /tmp/patch-6-2-biuwy70n database locked=False
+
+01:59:33 stoqlib.database.settings executing psql -U stoq -h localhost -p 5432 -n -q -f - --variable ON_ERROR_STOP= stoq
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:57: ERROR:  constraint "inventory_identifier_branch_id_key" of relation "inventory" does not exist
+
+01:59:41 stoqlib.lib.crashreport.CustomRavenClient Configuring Raven for host: <raven.conf.remote.RemoteConfig object at 0x7f0678867c88>
+
+01:59:41 stoqlib.lib.crashreport.CustomRavenClient Sending message of length 2982 to https://sentry.stoq.com.br/api/4/store/
+
+01:59:41 stoqlib.database.create ERROR:Traceback (most recent call last):
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 439, in update
+
+    super(StoqlibSchemaMigration, self).update()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 313, in update
+
+    from_, to = self._update_schema()
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 235, in _update_schema
+
+    patch.apply(self.default_store)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/migration.py", line 114, in apply
+
+    retcode = db_settings.execute_sql(temporary)
+
+  File "/usr/lib/python3.5/dist-packages/stoqlib/database/settings.py", line 590, in execute_sql
+
+    raise SQLError(stderr[:-1].decode())
+
+stoqlib.database.exceptions.SQLError: psql:<stdin>:57: ERROR:  constraint "inventory_identifier_branch_id_key" of relation "inventory" does not exist
+
+
+
+01:59:41 stoqlib.database.migration Restoring backup /tmp/stoq-dump-p5lsddrg
+
+01:59:41 stoqlib.database.create RESTORE-START:
+
+01:59:41 stoqlib.database.settings Restoring database stoq using /tmp/stoq-dump-p5lsddrg
+
+01:59:41 stoqlib.database.settings Cleaning database stoq__backup_20191215_0159
+
+01:59:41 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+01:59:41 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+01:59:41 stoqlib.database.settings Dropped database stoq__backup_20191215_0159
+
+01:59:41 stoqlib.database.settings Connecting to postgres://stoq@localhost:5432/postgres?isolation=read-committed
+
+01:59:43 stoqlib.database.settings executing pg_restore -d stoq__backup_20191215_0159 -U stoq -h localhost -p 5432 /tmp/stoq-dump-p5lsddrg
+
+01:59:43 stoqlib.database.create RESTORE-DONE:stoq__backup_20191215_0159
+
+Sentry is attempting to send 1 pending error messages
+
+Waiting up to 10 seconds
+
+Press Ctrl-C to quit
+
+

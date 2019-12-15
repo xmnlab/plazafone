@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  stoqdb:
+    image: postgres:9.5
+    hostname: stoqdb
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 'stoq'
+    volumes:
+      - /home/xmn/data:/var/lib/postgresql/data

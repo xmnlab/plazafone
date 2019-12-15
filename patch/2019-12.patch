@@ -48,4 +48,4 @@ UNIQUE (identifier, branch_id);
 
 ALTER TABLE transfer_order
 ADD CONSTRAINT transfer_order_identifier_source_branch_id_key
-UNIQUE (identifier, source, branch_id);
+UNIQUE (identifier, source_branch_id);

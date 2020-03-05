@@ -9,8 +9,8 @@ Estado: Execução Finalizada
 
 Atendente:    aa
 
-Cliente: ABILIO PASSOS
-  C.P.F.: 49596322834
+Cliente: ABILIO
+  C.P.F.: 49596322899
 
 Aparelho
   No. Hexadecimal: 111111111111
@@ -54,8 +54,8 @@ Estado: Execução Finalizada
 
 Atendente:    aa
 
-Cliente: ABILIO PASSOS
-  C.P.F.: 49596322834
+Cliente: ABILIO
+  C.P.F.: 49596322899
   Telefone: 111111111111111
   E-mail: 
 

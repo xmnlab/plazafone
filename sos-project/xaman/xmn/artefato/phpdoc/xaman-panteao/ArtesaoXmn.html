@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class ArtesaoXmn</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ArtesaoXmn</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ArtesaoXaman: Classe que trabalha com elementos visuais</p>
+<p class="description"><p>A classe ArtesaoXaman tem como int�ito permitir trabalhar com elementos  visuais como trabalhar com imagens ou criar combos de forma simples</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Ivan Ogassavara &lt;<a href="mailto:ivan.ogassavara@gmail.com">ivan.ogassavara@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> Release: @package_version@</li>
+				<li><span class="field">copyright:</span> Copyright (C) 2008  Ivan Ogassavara</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses">GNU License</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_panteao---ArtesaoXmn.php.html">/panteao/ArtesaoXmn.php</a> (line <span class="field">46</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+										
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiParametro" title="details" class="method-name">atribuiParametro</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$valor</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaCaixaChecagem" title="details" class="method-name">criaCaixaChecagem</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$check</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaCaixaGrandeTexto" title="details" class="method-name">criaCaixaGrandeTexto</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">&quot;&quot;</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaCaixaInvisivel" title="details" class="method-name">criaCaixaInvisivel</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaCaixaSenha" title="details" class="method-name">criaCaixaSenha</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaCaixaTexto" title="details" class="method-name">criaCaixaTexto</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaFerramenta" title="details" class="method-name">criaFerramenta</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nomeFerramenta</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$conteudo</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaListaDados" title="details" class="method-name">criaListaDados</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nomeLista</span> = <span class="var-default">''</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$arrAtributo</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$lstFerramenta</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lstParametroPedido</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lstDados</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$entidadeJsFlx</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaListaMultiplaSelecao" title="details" class="method-name">criaListaMultiplaSelecao</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$valorModeloLista</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaListaOpcoes" title="details" class="method-name">criaListaOpcoes</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$idBusca</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$separador</span> = <span class="var-default">&quot;&lt;br /&gt;&quot;</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#criaListaSelecao" title="details" class="method-name">criaListaSelecao</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$idBusca</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#modificaImagem" title="details" class="method-name">modificaImagem</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$imagemOrigem</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$imagemDestino</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#pegaFerramenta" title="details" class="method-name">pegaFerramenta</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nomeFerramenta</span>)
+									</div>
+																																																																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodatribuiParametro" id="atribuiParametro"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiParametro</span> (line <span class="line-number">52</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiParametro
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$valor</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$valor</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaCaixaChecagem" id="criaCaixaChecagem"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaCaixaChecagem</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaCaixaChecagem
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$check</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$check</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaCaixaGrandeTexto" id="criaCaixaGrandeTexto"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaCaixaGrandeTexto</span> (line <span class="line-number">457</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaCaixaGrandeTexto
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">&quot;&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaCaixaInvisivel" id="criaCaixaInvisivel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaCaixaInvisivel</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaCaixaInvisivel
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaCaixaSenha" id="criaCaixaSenha"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaCaixaSenha</span> (line <span class="line-number">149</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaCaixaSenha
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaCaixaTexto" id="criaCaixaTexto"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaCaixaTexto</span> (line <span class="line-number">439</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaCaixaTexto
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaFerramenta" id="criaFerramenta"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaFerramenta</span> (line <span class="line-number">57</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaFerramenta
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nomeFerramenta</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$conteudo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$xaman</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nomeFerramenta</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$conteudo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaListaDados" id="criaListaDados"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaListaDados</span> (line <span class="line-number">250</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaListaDados
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nomeLista</span> = <span class="var-default">''</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$arrAtributo</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$lstFerramenta</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lstParametroPedido</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lstDados</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$entidadeJsFlx</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$xaman</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nomeLista</span>			</li>
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ListaModeloXmn.html">ListaModeloXmn</a></span>
+				<span class="var-name">$listaModelo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$arrAtributo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lstFerramenta</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lstParametroPedido</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lstDados</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$entidadeJsFlx</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaListaMultiplaSelecao" id="criaListaMultiplaSelecao"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaListaMultiplaSelecao</span> (line <span class="line-number">201</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaListaMultiplaSelecao
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$valorModeloLista</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ListaModeloXmn.html">ListaModeloXmn</a></span>
+				<span class="var-name">$listaModelo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ListaModeloXmn.html">ListaModeloXmn</a></span>
+				<span class="var-name">$valorModeloLista</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaListaOpcoes" id="criaListaOpcoes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaListaOpcoes</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaListaOpcoes
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$idBusca</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$separador</span> = <span class="var-default">&quot;&lt;br /&gt;&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ListaModeloXmn.html">ListaModeloXmn</a></span>
+				<span class="var-name">$listaModelo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$idBusca</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$separador</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriaListaSelecao" id="criaListaSelecao"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static criaListaSelecao</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			criaListaSelecao
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$listaModelo</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$idBusca</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ListaModeloXmn.html">ListaModeloXmn</a></span>
+				<span class="var-name">$listaModelo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$idBusca</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmodificaImagem" id="modificaImagem"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static modificaImagem</span> (line <span class="line-number">466</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			modificaImagem
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$imagemOrigem</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$imagemDestino</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">ImagemXamanMdl</span>
+				<span class="var-name">$imagemOrigem</span>			</li>
+					<li>
+				<span class="var-type">ImagemXamanMdl</span>
+				<span class="var-name">$imagemDestino</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpegaFerramenta" id="pegaFerramenta"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaFerramenta</span> (line <span class="line-number">63</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			pegaFerramenta
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$xaman</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nomeFerramenta</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$xaman</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nomeFerramenta</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 20 Feb 2009 02:33:03 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

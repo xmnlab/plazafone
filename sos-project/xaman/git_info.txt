@@ -1,0 +1,1 @@
+ssh://karx@xaman.git.sourceforge.net/gitroot/xaman/xaman

@@ -1,0 +1,32 @@
+ALTERAÇÃO DE CHAMADAS DE MÉTODOS DA CLASSE DE PERSISTÊNCIA
+1 - pesquisar -> consultar
+
+ALTERAÇÃO DA PASSAGEM DE FILTRO DE MÉTODOS DA CLASSE DE PERSISTÊNCIA
+1 - FILTRO_*
+
+FINALIZAÇÃO DA CLASSE DE IMAGEM ARTEFATOXMN (GravuraXmn)
+1 - passagem de parametros por string
+    exemplo :   'width:30px;height:50px;max-height:300px;min-height:800px;'
+              . 'max-width:300px;min-width:800px'
+
+MOVIMENTAÇÃO DO SUBPACOTE DE XAMAN.ARTEFATOS PARA XAMAN.MODELO.ARTEFATO
+
+CRIAÇÃO DO SUBPACOTE XAMAN.PANTEAO.ARTE
+
+CRIAÇÃO DAS CLASSES
+    xaman.panteao.arte.GravuraXmn
+    xaman.panteao.arte.EscritaXmn
+
+ALTERAÇÃO DA CLASSE TRATAMENTOXMN
+    Recebe parâmetros para atribuir o arquetipo e a identificacao do tratamento
+    logo em sua chamada
+
+IMPLEMENTAR INICIO DE UMA CAMADA DE TEMPLATE ARTESAOXMN
+
+OBS
+CRIAR UM SISTEMA DE AUTENTICAÇÃO PADRAO PARA SER UTILIZADO EM OUTROS SISTEMAS
+GuardiaoXmn
+
+MELHORAR O CONSULTORXMN
+VALIDAR ATRAVES DE EXPRESSOES REGULARES
+MUDAR O NOME DA CLASSE. SUGESTOES: ProfessorXmn

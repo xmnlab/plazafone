@@ -1,0 +1,28 @@
+<origem 
+  xaman="Xaman" 
+  raiz="XAMAN"
+  aldeia="entidade"
+  caminho="/var/www/xaman/xmn/entidade/" >
+    
+  <atributo 
+    nome="RITUAL"
+    aldeia="ritual"
+    caminho="/var/www/xaman/xmn/ritual/" />
+  
+  <atributo 
+    nome="ARTEFATO"
+    aldeia="artefato"
+    caminho="/var/www/xaman/xmn/artefato/" />
+    
+  <atributo 
+    nome="LINGUA"
+    valor="iso-8859-1" />
+    
+  <panteao invoca="xaman.modelo" />
+  <panteao invoca="xaman.panteao" />
+  <panteao invoca="xaman.fluxo" />
+  <panteao invoca="xaman.persistencia" />
+  <panteao invoca="xaman.persistencia.modelo" />
+  <panteao invoca="xaman.persistencia.intermediario" />
+  
+</origem>

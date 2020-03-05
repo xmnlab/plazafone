@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<lista_panteao>
+    <panteao nome="xaman.panteao">
+        <entidade nome="ArtesaoXmn.php" />
+        <entidade nome="ConsultorXmn.php" />
+        <entidade nome="CriadorXmn.php" />
+        <entidade nome="GuardiaoXmn.php" />
+        <entidade nome="MascaraXmn.php" />
+        <entidade nome="MensageiroXmn.php" />
+        <entidade nome="PanteaoXmn.php" />
+        <entidade nome="TempoXmn.php" />
+    </panteao>
+    <panteao nome="xaman.modelo">
+        <entidade nome="ModeloXmn.php" />
+        <entidade nome="ListaModeloXmn.php" />
+        <entidade nome="DirecaoXMdl.php" />
+        <entidade nome="ReencarnacaoXMdl.php" />
+    </panteao>
+    <panteao nome="xaman.modelo.artefato">
+        <entidade nome="ArtefatoXMdl.php" />
+        <entidade nome="GravuraXMdl.php" />
+        <entidade nome="MensagemXMdl.php" />
+        <entidade nome="CorrespondenciaXMdl.php" />
+    </panteao>
+    <panteao nome="xaman.panteao.arte">
+        <entidade nome="EscritaXmn.php" />
+        <entidade nome="GravuraXmn.php" />
+    </panteao>
+    <panteao nome="xaman.modelo.comum">
+        <entidade nome="BairroXMdl.php" />
+        <entidade nome="CidadeXMdl.php" />
+        <entidade nome="EnderecoXMdl.php" />
+        <entidade nome="TelefoneXMdl.php" />
+        <entidade nome="TipoLogradouroXMdl.php" />
+        <entidade nome="UfXMdl.php" />
+        <entidade nome="ZonaXMdl.php" />
+    </panteao>
+    <panteao nome="xaman.fluxo">
+        <entidade nome="FluxoXmn.php" />
+    </panteao>
+    <panteao nome="xaman.persistencia">]
+        <entidade nome="PersistenciaXmn.php" />
+        <entidade nome="IntermediarioPrstXmn.php" />
+    </panteao>
+    <panteao nome="xaman.persistencia.modelo">
+        <entidade nome="ConexaoXMdl.php" />
+    </panteao>
+    <panteao nome="xaman.persistencia.intermediario">
+        <entidade nome="MySQL.php" />
+        <entidade nome="PSQL.php" />
+        <entidade nome="MSSQL.php" />
+    </panteao>
+    <panteao nome="xaman.externo">
+        <entidade nome="ClassXmlArray.php" />
+    </panteao>
+</lista_panteao>

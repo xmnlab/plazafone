@@ -1,0 +1,137 @@
+#!/usr/bin/python
+
+import os
+import sys
+import string
+
+diretorioCorrente = '/var/www/xaman'
+
+print u'''
+ ____________________________________________________________
+|                                                            |
+|       BEM VINDO A ESTRUTA DE DESENVOLVIMENTO XAMAN         |
+|       A SEGUIR INICIARA ALGUNS PASSOS PARA QUE SEU         |
+|                NOVO PROJETO SEJA INICIADO.                 |
+|               BOA SORTE EM SUA NOVA JORNADA!               |
+|____________________________________________________________|
+
+'''.encode('utf-8')
+
+senha = raw_input('INFORME A SENHA DE ACESSO: ')
+
+if senha != 'bruxa71':
+    raw_input("\nACESSO NEGADO! PRESSIONE <ENTER> PARA ENCERRAR.\n")
+    sys.exit()
+
+nomeProjeto       = raw_input('INFORME O CODINOME DO PROJETO: ')
+diretorioProjeto  = raw_input("\nINFORME O DIRETORIO DO PROJETO: ")
+
+lstClasse   = []
+chaveamento = 1
+
+print """
+__________________________________________
+
+ETAPA 1 - DEFINICAO DAS CLASSES DO PROJETO
+___________________________________________
+
+INFORME O NOME DAS CLASSES QUE IRAO COMPOR O PROJETO
+PARA FINALIZAR ESSA ETAPA PRESSIONE <ENTER> SEM INFORMAR NENHUM NOME
+"""
+
+# DEFINICOES PARA A CRIACAO DAS CLASSES
+# 1 - NOME NOME DA CLASSE
+# 2 - TIPO DA CLASSE: MODELO, PERSISTENCIA, FLUXO
+#    2.1 - CASO A CLASSE SEJA DO TIPO MODELO PERGUNTAR:
+#        "DESEJA CRIAR AS CLASSES DE FLUXO E PERSISTENCIA?"
+# 3 - NOME DOS ATRIBUTOS
+#     EXEMPLO: "[visibilidade] [static] String nomeAtributo 
+# 4 - NOME DOS METODOS
+#     EXEMPLO: "[visibilidad] [static] String nomeAtributo
+#     4.1 - NOME DOS PARAMETROS
+#         EXEMPLO: "String [&]nomeAtributo
+
+# DEFINICAO DAS CLASSES
+while chaveamento == 1 :
+    nomeClasse = raw_input('INFORME O NOME DA CLASSE: ')
+        
+    if nomeClasse == '' :
+        chaveamento = 0
+    else :
+        classe = []
+        classe.append(nomeClasse)
+        
+        # DEFINICAO DOS ATRIBUTOS DA CLASSE
+        chaveamentoAtributo = 1
+        while chaveamentoAtributo == 1 :
+            nomeAtributo = raw_input('INFORME O ATRIBUTO DA CLASSE "' 
+                + nomeClasse + '": ')
+            
+            if nomeAtributo == '' :
+                chaveamentoAtributo = 0
+                print ''
+                
+            else :
+                classe.append(nomeAtributo)
+        
+        lstClasse.append(classe)
+
+# ESTRUTURA DO PROJETO
+# - projeto
+#    - artefato
+#        - phpdoc
+#        - diagrama
+#        - persistencia
+#    - entidade
+#        - fluxo
+#        - modelo
+#        - persistencia
+#    - mascara
+#        - estrutura
+#            - enfeite
+#        - modelo
+#            - chefe
+#                - enfeite
+#                - imagem
+#        - rotina
+#    - ritual
+
+diretorioRaiz = diretorioProjeto + '/' + nomeProjeto
+
+os.system('mkdir ' + diretorioRaiz)
+os.system('mkdir ' + diretorioRaiz + '/artefato')
+os.system('mkdir ' + diretorioRaiz + '/artefato/phpdoc')
+os.system('mkdir ' + diretorioRaiz + '/artefato/diagrama')
+os.system('mkdir ' + diretorioRaiz + '/artefato/persistencia')
+os.system('mkdir ' + diretorioRaiz + '/entidade')
+os.system('mkdir ' + diretorioRaiz + '/entidade/fluxo')
+os.system('mkdir ' + diretorioRaiz + '/entidade/modelo')
+os.system('mkdir ' + diretorioRaiz + '/entidade/persistencia')
+os.system('mkdir ' + diretorioRaiz + '/mascara')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/enfeite')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/modelo')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/modelo/chefe')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/modelo/chefe/enfeite')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/modelo/chefe/imagem')
+os.system('mkdir ' + diretorioRaiz + '/mascara/estrutura/rotina')
+os.system('mkdir ' + diretorioRaiz + '/ritual')
+
+os.system('cp -R ' + diretorioCorrente + '/artefato '        + diretorioRaiz)
+os.system('cp -R ' + diretorioCorrente + '/criador/mascara ' + diretorioRaiz)
+os.system('cp -R ' + diretorioCorrente + '/index.php '       + diretorioRaiz)
+
+print '''
+_______________________________________________________
+
+          PROCESSO REALIZADO COM SUCESSO!
+       BOM TRABALHO COM O SEU NOVO PROJETO!
+_______________________________________________________
+
+'''
+
+raw_input("PRESSIONE <ENTER> PARA ENCERRAR\n")
+
+os.system('clear')
+
+sys.exit();

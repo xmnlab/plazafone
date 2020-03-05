@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Xaman</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Xaman</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../xaman/xaman-fluxo/EstruturaXmn.html">EstruturaXmn</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Xaman: Classe Mestre</p>
+<p class="description"><p>A classe Xaman tem como int�ito promover � Classe extendida métodos  essenciais para receber os dados de requisi��o e processar e  acionar as classes de fluxo necess�rias � entrega da requisi��o</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Ivan Ogassavara &lt;<a href="mailto:ivan.ogassavara@gmail.com">ivan.ogassavara@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> Release: @package_version@</li>
+				<li><span class="field">copyright:</span> Copyright (C) 2008  Ivan Ogassavara</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses">GNU License</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Xaman.php.html">/Xaman.php</a> (line <span class="field">55</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																		
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#abrePortal" title="details" class="method-name">abrePortal</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$modoMoldura</span> = <span class="var-default">true</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#adicionaCaminhoJornada" title="details" class="method-name">adicionaCaminhoJornada</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$caminho</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiAldeiaEntidade" title="details" class="method-name">atribuiAldeiaEntidade</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaEntidade</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiAldeiaMascara" title="details" class="method-name">atribuiAldeiaMascara</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaMascara</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiAldeiaMascaraReal" title="details" class="method-name">atribuiAldeiaMascaraReal</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaMascaraReal</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiAldeiaPachaMama" title="details" class="method-name">atribuiAldeiaPachaMama</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$aldeiaPachaMama</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaEntidade</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiAldeiaXaman" title="details" class="method-name">atribuiAldeiaXaman</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaXaman</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiLinguagem" title="details" class="method-name">atribuiLinguagem</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$linguagem</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atribuiReencarnacaoXMdl" title="details" class="method-name">atribuiReencarnacaoXMdl</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$reencarnacaoXMdl</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#exibeTratamentoXaman" title="details" class="method-name">exibeTratamentoXaman</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#iniciaJornada" title="details" class="method-name">iniciaJornada</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$direcaoMdl</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#iniciaLinguagem" title="details" class="method-name">iniciaLinguagem</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$linguagem</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#mudaJornada" title="details" class="method-name">mudaJornada</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$jornada</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaAldeiaEntidade" title="details" class="method-name">pegaAldeiaEntidade</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaAldeiaMascara" title="details" class="method-name">pegaAldeiaMascara</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaAldeiaMascaraReal" title="details" class="method-name">pegaAldeiaMascaraReal</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaAldeiaPachaMama" title="details" class="method-name">pegaAldeiaPachaMama</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaAldeiaXaman" title="details" class="method-name">pegaAldeiaXaman</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#pegaDirecaoEstruturada" title="details" class="method-name">pegaDirecaoEstruturada</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$direcao</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#pegaLinguagem" title="details" class="method-name">pegaLinguagem</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#pegaReencarnacaoXMdl" title="details" class="method-name">pegaReencarnacaoXMdl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#transportaModeloPortal" title="details" class="method-name">transportaModeloPortal</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$modeloXaman</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nomeModelo</span> = <span class="var-default">null</span>])
+									</div>
+																		
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#aaa" title="details" class="method-name">aaa</a>
+										()
+									</div>
+																																																																																																																																																																																											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodabrePortal" id="abrePortal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static abrePortal</span> (line <span class="line-number">258</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			abrePortal
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$modoMoldura</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$modoMoldura</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodabrePortal">EstruturaXmn::abrePortal()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodadicionaCaminhoJornada" id="adicionaCaminhoJornada"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static adicionaCaminhoJornada</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			adicionaCaminhoJornada
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$caminho</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$caminho</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodadicionaCaminhoJornada">EstruturaXmn::adicionaCaminhoJornada()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiAldeiaEntidade" id="atribuiAldeiaEntidade"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiAldeiaEntidade</span> (line <span class="line-number">147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes do sistema</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiAldeiaEntidade
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaEntidade</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$aldeiaEntidade</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiAldeiaEntidade">EstruturaXmn::atribuiAldeiaEntidade()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiAldeiaMascara" id="atribuiAldeiaMascara"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiAldeiaMascara</span> (line <span class="line-number">173</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z da URL do sistema</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiAldeiaMascara
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaMascara</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$aldeiaMascara</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiAldeiaMascara">EstruturaXmn::atribuiAldeiaMascara()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiAldeiaMascaraReal" id="atribuiAldeiaMascaraReal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiAldeiaMascaraReal</span> (line <span class="line-number">186</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z f�sica das m�scaras do sistema</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiAldeiaMascaraReal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaMascaraReal</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$aldeiaMascaraReal</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiAldeiaMascaraReal">EstruturaXmn::atribuiAldeiaMascaraReal()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiAldeiaPachaMama" id="atribuiAldeiaPachaMama"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiAldeiaPachaMama</span> (line <span class="line-number">160</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z do sistema</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiAldeiaPachaMama
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$aldeiaPachaMama</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaEntidade</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$aldeiaEntidade</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$aldeiaPachaMama</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiAldeiaPachaMama">EstruturaXmn::atribuiAldeiaPachaMama()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiAldeiaXaman" id="atribuiAldeiaXaman"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiAldeiaXaman</span> (line <span class="line-number">134</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiAldeiaXaman
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$aldeiaXaman</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$aldeiaXaman</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiAldeiaXaman">EstruturaXmn::atribuiAldeiaXaman()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiLinguagem" id="atribuiLinguagem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiLinguagem</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor da linguagem utilizada pelo Xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiLinguagem
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$linguagem</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$linguagem</span><span class="var-description">: linguagem</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiLinguagem">EstruturaXmn::atribuiLinguagem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodatribuiReencarnacaoXMdl" id="atribuiReencarnacaoXMdl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static atribuiReencarnacaoXMdl</span> (line <span class="line-number">211</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			atribuiReencarnacaoXMdl
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$reencarnacaoXMdl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reencarnacaoXMdl</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodatribuiReencarnacaoXMdl">EstruturaXmn::atribuiReencarnacaoXMdl()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodexibeTratamentoXaman" id="exibeTratamentoXaman"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static exibeTratamentoXaman</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			exibeTratamentoXaman
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodiniciaJornada" id="iniciaJornada"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static iniciaJornada</span> (line <span class="line-number">224</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			iniciaJornada
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$direcaoMdl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/DirecaoXMdl.html">DirecaoXMdl</a></span>
+				<span class="var-name">&$direcaoMdl</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodiniciaJornada">EstruturaXmn::iniciaJornada()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodiniciaLinguagem" id="iniciaLinguagem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static iniciaLinguagem</span> (line <span class="line-number">229</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			iniciaLinguagem
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$linguagem</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$linguagem</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodiniciaLinguagem">EstruturaXmn::iniciaLinguagem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodmudaJornada" id="mudaJornada"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static mudaJornada</span> (line <span class="line-number">247</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			mudaJornada
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$jornada</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$jornada</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpegaAldeiaEntidade" id="pegaAldeiaEntidade"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaAldeiaEntidade</span> (line <span class="line-number">286</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pega valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaAldeiaEntidade
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaAldeiaEntidade">EstruturaXmn::pegaAldeiaEntidade()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaAldeiaMascara" id="pegaAldeiaMascara"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaAldeiaMascara</span> (line <span class="line-number">311</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaAldeiaMascara
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaAldeiaMascara">EstruturaXmn::pegaAldeiaMascara()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaAldeiaMascaraReal" id="pegaAldeiaMascaraReal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaAldeiaMascaraReal</span> (line <span class="line-number">323</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaAldeiaMascaraReal
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaAldeiaMascaraReal">EstruturaXmn::pegaAldeiaMascaraReal()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaAldeiaPachaMama" id="pegaAldeiaPachaMama"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaAldeiaPachaMama</span> (line <span class="line-number">298</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pega valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaAldeiaPachaMama
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaAldeiaPachaMama">EstruturaXmn::pegaAldeiaPachaMama()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaAldeiaXaman" id="pegaAldeiaXaman"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaAldeiaXaman</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pega valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaAldeiaXaman
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$direcao</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaAldeiaXaman">EstruturaXmn::pegaAldeiaXaman()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaDirecaoEstruturada" id="pegaDirecaoEstruturada"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaDirecaoEstruturada</span> (line <span class="line-number">335</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atribui valor para a ra�z das classes da estrutura xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			pegaDirecaoEstruturada
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$direcao</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direcao</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpegaLinguagem" id="pegaLinguagem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaLinguagem</span> (line <span class="line-number">350</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retorna a linguagem utilizada pelo Xaman</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pegaLinguagem
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaLinguagem">EstruturaXmn::pegaLinguagem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpegaReencarnacaoXMdl" id="pegaReencarnacaoXMdl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static pegaReencarnacaoXMdl</span> (line <span class="line-number">362</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			pegaReencarnacaoXMdl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodpegaReencarnacaoXMdl">EstruturaXmn::pegaReencarnacaoXMdl()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodtransportaModeloPortal" id="transportaModeloPortal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static transportaModeloPortal</span> (line <span class="line-number">252</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			transportaModeloPortal
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$modeloXaman</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nomeModelo</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../xaman-modelo/ModeloXmn.html">ModeloXmn</a></span>
+				<span class="var-name">$modeloXaman</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nomeModelo</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../xaman/xaman-fluxo/EstruturaXmn.html#methodtransportaModeloPortal">EstruturaXmn::transportaModeloPortal()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodaaa" id="aaa"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">aaa</span> (line <span class="line-number">57</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			aaa
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 20 Feb 2009 02:33:06 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>
